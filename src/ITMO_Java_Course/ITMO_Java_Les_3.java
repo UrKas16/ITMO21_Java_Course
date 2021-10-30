@@ -1,14 +1,16 @@
 package ITMO_Java_Course;
 
+//import java.lang.reflect.Array;
+
 import java.util.Arrays;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ITMO_Java_Les_3 {
     public static void main(String[] args) {
 //        int[] array = Algorithm.createArray(10, 10);
 //        System.out.println(Arrays.toString(array));
 
-        int[] array1 = new int[]{1, 2, 1, 3, 1, 2, 4, 4, 3};
+        int[] array1 = new int[]{1, 3, 1, 1, 3, 3, 3};
 
 //        changePlacesOfArray(array);
 
@@ -18,11 +20,14 @@ public class ITMO_Java_Les_3 {
 
 //        uniNum(array1);
 
-        numOfFib(20);
+//        numOfFib(20);
+
+        numOfK(array1, 2);
 
     }
 
     // Задание 1.
+/*
     public static void sortArray(int[] array) {
         int count = 0;
         for (int i = 0; i <= array.length - 2; i++) {
@@ -100,11 +105,35 @@ public class ITMO_Java_Les_3 {
     public static void sortOfSlip(int[] array){
 
     }
+*/
 
-    // Задпние 7
-    public static void numOfK(int[] array, int x){
-
-
+    // Задание 7*** Дан массив и число K. Найдите первые K самых часто встречающихся элементов.
+    public static void numOfK(int[] array, int x) {
+        System.out.println(Arrays.toString(array));
+        int[] arrayCount = new int[x];
+        int[] arrayNum = new int[x];
+        int count = 0;
+        int num = 0;
+        int findNum = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int k : array) {
+                if (array[i] == k) {
+                    num += 1;
+                }
+            }
+            for (int j = 0; j <= i; j++) { // сюда приходит первая 3
+                if (num > arrayCount[j]) {
+                    int tmpNum = arrayCount[j];
+                    arrayCount[j] = num;
+                    arrayCount[j + 1] = tmpNum;
+                    arrayNum[j + 1] = arrayNum[j];
+                }
+                arrayNum[j] = array[i];
+            }
+            num = 0;
+        }
+        System.out.println(Arrays.toString(arrayNum));
+        System.out.println(Arrays.toString(arrayCount));
     }
-
 }
+
