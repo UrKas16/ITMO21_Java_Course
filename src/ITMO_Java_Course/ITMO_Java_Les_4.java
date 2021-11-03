@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class ITMO_Java_Les_4 {
     public static void main(String[] args) {
-/*
         String a = "Роман Фрэнка Герберта появился задолго до того, как жанр космооперы стал популярным среди широких масс. " +
                 "Книга получила премии «Хьюго» и «Небула» за выдающийся вклад в развитие научной фантастики. " +
                 "«Дюна» считается одним из величайших научно-фантастических произведений всех времен и часто упоминается как самый продаваемый роман данного жанра в истории. " +
@@ -18,15 +17,15 @@ public class ITMO_Java_Les_4 {
                 "Здесь тесно переплетаются судьбы самого Пола, его семьи, коренных жителей Арракиса, Императора, могущественных гильдий и орденов. " +
                 "Великое противостояние сильных мира сего ведет к глобальным переменам, которые затронут все человечество.";
 
-        longString(a);
-*/
+       // longString(a);
 /*
         String a = "казарма";
         polindromeWorld(a);
 */
 
-        String str = "Привет я якарта";
-        censorshipString(str);
+        String str = "Привет я бяка, и ты тоже бяка";
+        String str1 = "на";
+        searchOfSame(str1, a);
 
     }
 
@@ -73,6 +72,14 @@ public class ITMO_Java_Les_4 {
         String done = str.replace(byka, censor);
         System.out.println(done);
     }
+
+    // Задание 4. Найти количество вхождений одной (являющейся подстрокой) в другую.».
+    public static void searchOfSame(String str, String str1){
+        String temp = str1.replace(str, "");
+        int count = (str1.length() - temp.length()) / str.length();
+        System.out.println("Количество вхождений подстроки в строку составляет - " + count);
+    }
+
 }
 
 
