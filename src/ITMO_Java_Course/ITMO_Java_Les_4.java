@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ITMO_Java_Les_4 {
     public static void main(String[] args) {
+/*
         String a = "Роман Фрэнка Герберта появился задолго до того, как жанр космооперы стал популярным среди широких масс. " +
                 "Книга получила премии «Хьюго» и «Небула» за выдающийся вклад в развитие научной фантастики. " +
                 "«Дюна» считается одним из величайших научно-фантастических произведений всех времен и часто упоминается как самый продаваемый роман данного жанра в истории. " +
@@ -18,23 +19,52 @@ public class ITMO_Java_Les_4 {
                 "Великое противостояние сильных мира сего ведет к глобальным переменам, которые затронут все человечество.";
 
         longString(a);
+*/
+/*
+        String a = "казарма";
+        polindromeWorld(a);
+*/
 
-        }
+        String str = "Топот";
+        polindromeWorld(str);
+
+    }
 
 
-
-    //Задание 1.
-    public static void longString(String string) {
-        String[] array = string.split("\\.");
+    //Задание 1. Написать метод для поиска самой длинной строки.
+    public static void longString(String str) {
+        String[] array = str.split("\\.");
         String verylongstring;
         int lineLength = 0;
         int indexOfarray = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i].length() > lineLength){
+            if (array[i].length() > lineLength) {
                 lineLength = array[i].length();
                 indexOfarray = i;
             }
         }
         System.out.println("Самая длинная строка в тексте это - " + array[indexOfarray] + "\nЕё длинна составляет - " + lineLength + " символов включая пробелы.");
     }
+
+    // Задание 2. Написать метод, который проверяет является ли слово палиндромом.
+    public static void polindromeWorld(String str) {
+        String str1 = str.toLowerCase();
+        String[] poliWorld = str1.split("");
+        boolean flag = false;
+        int count = 0;
+        for (int i = 0; i < poliWorld.length / 2; i++) {
+            if (poliWorld[i].equals(poliWorld[poliWorld.length - (i + 1)])){
+                flag = true;
+                count++;
+            }
+        }
+        if (flag & count == poliWorld.length / 2) {
+            System.out.println("Строка " + "\"" + str + "\"" + " является полиндромом.");
+        } else {
+            System.out.println("Строка не является полиндромом");
+        }
+
+    }
 }
+
+
