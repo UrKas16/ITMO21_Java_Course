@@ -25,8 +25,8 @@ public class ITMO_Java_Les_4 {
         polindromeWorld(a);
 */
 
-        String str = "Топот";
-        polindromeWorld(str);
+        String str = "Привет я якарта";
+        censorshipString(str);
 
     }
 
@@ -64,6 +64,14 @@ public class ITMO_Java_Les_4 {
             System.out.println("Строка не является полиндромом");
         }
 
+    }
+
+    // Задание 3. Напишите метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]».
+    public static void censorshipString(String str){
+        String byka = "бяка";
+        String censor = "[вырезано цензурой]";
+        String done = str.replace(byka, censor);
+        System.out.println(done);
     }
 }
 
