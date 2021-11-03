@@ -17,15 +17,15 @@ public class ITMO_Java_Les_4 {
                 "Здесь тесно переплетаются судьбы самого Пола, его семьи, коренных жителей Арракиса, Императора, могущественных гильдий и орденов. " +
                 "Великое противостояние сильных мира сего ведет к глобальным переменам, которые затронут все человечество.";
 
-       // longString(a);
+        // longString(a);
 /*
         String a = "казарма";
         polindromeWorld(a);
 */
 
-        String str = "Привет я бяка, и ты тоже бяка";
-        String str1 = "на";
-        searchOfSame(str1, a);
+        String str = "Великое противостояние сильных мира сего ведет к глобальным переменам, которые затронут все человечество.";
+        inversionString(str);
+
 
     }
 
@@ -52,7 +52,7 @@ public class ITMO_Java_Les_4 {
         boolean flag = false;
         int count = 0;
         for (int i = 0; i < poliWorld.length / 2; i++) {
-            if (poliWorld[i].equals(poliWorld[poliWorld.length - (i + 1)])){
+            if (poliWorld[i].equals(poliWorld[poliWorld.length - (i + 1)])) {
                 flag = true;
                 count++;
             }
@@ -66,19 +66,35 @@ public class ITMO_Java_Les_4 {
     }
 
     // Задание 3. Напишите метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]».
-    public static void censorshipString(String str){
+    public static void censorshipString(String str) {
         String byka = "бяка";
         String censor = "[вырезано цензурой]";
         String done = str.replace(byka, censor);
         System.out.println(done);
     }
 
-    // Задание 4. Найти количество вхождений одной (являющейся подстрокой) в другую.».
-    public static void searchOfSame(String str, String str1){
+    // Задание 4. Найти количество вхождений одной (являющейся подстрокой) в другую.
+    public static void searchOfSame(String str, String str1) {
         String temp = str1.replace(str, "");
         int count = (str1.length() - temp.length()) / str.length();
         System.out.println("Количество вхождений подстроки в строку составляет - " + count);
     }
+
+    // Задание 5. Напишите метод, который инвертирует слова в строке.
+    public static void inversionString(String str) {
+        String[] arrayStr = str.split("");
+        String[] newArrayStr = new String[str.length()];
+        for (int i = 0; i < arrayStr.length; i++) {
+            newArrayStr[newArrayStr.length - (i + 1)] = arrayStr[i];
+
+        }
+        for (String i : newArrayStr) {
+            System.out.print(i);
+        }
+
+
+    }
+
 
 }
 
