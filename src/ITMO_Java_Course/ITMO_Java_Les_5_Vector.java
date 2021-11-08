@@ -3,9 +3,9 @@ package ITMO_Java_Course;
 import java.util.Arrays;
 
 public class ITMO_Java_Les_5_Vector {
-    public double x;
-    public double z;
-    public double y;
+    private double x;
+    private double z;
+    private double y;
 
     public ITMO_Java_Les_5_Vector(double x, double y, double z) { //конструктор класса, принимает параметры точек
         this.x = x;
@@ -78,10 +78,6 @@ public class ITMO_Java_Les_5_Vector {
     }
 
 
-    @Override
-    public String toString() {
-        return "Vector{" + "x=" + x + ", y=" + y + ", z=" + z + "}";
-    }
 
 
     public static void main(String[] args) {
@@ -90,6 +86,8 @@ public class ITMO_Java_Les_5_Vector {
 
         ITMO_Java_Les_5_Vector newVector[] = randomVector(3);
         //double cosVec = cosVector(vector, vector1);
+
+
 
 
         //double len = vector.lenVector();
