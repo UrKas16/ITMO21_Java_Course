@@ -78,8 +78,6 @@ public class ITMO_Java_Les_5_Vector {
     }
 
 
-
-
     public static void main(String[] args) {
         ITMO_Java_Les_5_Vector vector = new ITMO_Java_Les_5_Vector(-15, 3, 45);
         ITMO_Java_Les_5_Vector vector1 = new ITMO_Java_Les_5_Vector(32, 4, -8);
@@ -88,13 +86,8 @@ public class ITMO_Java_Les_5_Vector {
         //double cosVec = cosVector(vector, vector1);
 
 
-
-
         //double len = vector.lenVector();
         System.out.println(Arrays.toString(newVector));
     }
-
-
-
 }
 

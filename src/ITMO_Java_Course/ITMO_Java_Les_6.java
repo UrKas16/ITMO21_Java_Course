@@ -39,10 +39,7 @@ public class ITMO_Java_Les_6 {
 
         System.out.println(plane.toString());
         System.out.println(plane1.toString());
-
-
-
-
+        System.out.println(wing.printWing());
     }
 }
 
@@ -128,9 +125,10 @@ class Airplane {
         this.weightWing = wing.weightWing();
         this.longPlane = longPlane;
     }
+
     public Airplane(int weightPlane, Wing wing, int longPlane) {
         this.weightPlane = weightPlane;
-        this.weightWing= wing.weightWing();
+        this.weightWing = wing.weightWing();
         this.longPlane = longPlane;
     }
 
